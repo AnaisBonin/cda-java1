@@ -3,8 +3,8 @@ public class While {
         System.out.println("Boucle WHILE");
         int i = 0;
         while (i < 101) {
-           System.out.println("i = " + i);
-           i++;
+                System.out.println("i = " + i);
+          i++;
         }
     }
 }
