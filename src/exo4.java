@@ -3,8 +3,9 @@ import java.util.Arrays;
 
 public class exo4 {
     public static void main(String[] args) {
-        ArrayList<String> nameList = new ArrayList<String> (Arrays.asList("Jean", "Ahmed", "Lea", "Blanca"));
+        ArrayList<String> nameList = new ArrayList<> (Arrays.asList("Jean", "Ahmed", "Lea", "Blanca"));
         describe(nameList);
+        to_upper_case(nameList);
 
     }
 
@@ -15,4 +16,12 @@ public class exo4 {
             if (length >= 4) System.out.println(name + " : " + length);
         }
     }
+
+    private static void to_upper_case(ArrayList<String> ArrayList) {
+        for (String name : ArrayList) {
+            String upperName = name.toUpperCase();
+            System.out.println(upperName);
+        }
+    }
+
 }
