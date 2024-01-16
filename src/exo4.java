@@ -10,7 +10,9 @@ public class exo4 {
 
     private static void describe(ArrayList<String> ArrayList) {
         for (String name : ArrayList) {
-            System.out.println(name + " : " + name.length());
+            int length = name.length();
+
+            if (length >= 4) System.out.println(name + " : " + length);
         }
     }
 }
