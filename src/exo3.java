@@ -5,7 +5,6 @@ public class exo3 {
         System.out.println("EXO 3");
         fibo(1);
         int[] result = approximation_fibo((float)0.01);
-        System.out.println("approx");
         System.out.println(Arrays.toString(result));
     }
 
@@ -31,11 +30,12 @@ public class exo3 {
         int[] result = new int[2];
         result[0] = 0;
 
-        int j = 4;
+        int j = 4; // We need to start comparing at 2 and 1. these values are given by fibo(4)
 
         while (result[0] == 0) {
-            int a = fibo(j)[j - 2];
-            int b = fibo(j)[j - 1];
+            int[] currentFibo= fibo(j);
+            int a = currentFibo[j - 2];
+            int b = currentFibo[j - 1];
             double ratioBA = (double) b / a;
             double diff = Math.abs(ratioBA - phi);
 
